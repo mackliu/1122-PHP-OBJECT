@@ -1,6 +1,6 @@
 <?php
 
-/* class Animal{
+class Animal{
     protected $name;
 
     public function __construct($name)
@@ -16,7 +16,7 @@
         return $this->name;
     }
 
-} */
+}
 
 $animal=new Animal('阿明'); //實例化 instant
 /* 
