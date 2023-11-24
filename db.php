@@ -1,9 +1,19 @@
 <?php 
+date_default_timezone_set("Asia/Taipei");
+session_start();
 class DB{
-    date_default_timezone_set("Asia/Taipei");
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=school";
-    $pdo = new PDO($dsn, 'root', '');
-    
+
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=school";
+    protected $pdo;
+    protected $table;
+
+    public function __construct($table)
+    {
+        $this->table=$table;
+        $this->pdo=new PDO($this->dsn,'root','');
+    }
+
+
     function all($table = null, $where = '', $other = '')
     {
         global $pdo;
