@@ -20,7 +20,7 @@ class Animal{
 
 $animal=new Animal('阿明'); //實例化 instant
 /* 
-echo '顯示名稱:'.$animal->getName();
+echo '顯示名稱:'.$animal->getName(); //說明
 echo "<br>";
 $animal->setName('小花');
 echo '顯示名稱:'.$animal->getName();
