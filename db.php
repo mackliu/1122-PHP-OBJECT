@@ -121,6 +121,9 @@ class DB{
         return $this->pdo->exec($sql);
     }
     
+    /**
+     * 可輸入各式SQL語法字串並直接執行
+     */
     function q($sql){
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
@@ -132,6 +135,7 @@ class DB{
         }
         return $tmp;
     }
+
 }
 
 function dd($array)
